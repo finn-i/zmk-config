@@ -75,6 +75,7 @@
 / {
     sensors {
         triggers-per-rotation = <20>; // change this to the number of detents your encoder has
+        resolution = <2>;
     };
 };
 
