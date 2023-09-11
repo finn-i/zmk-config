@@ -75,11 +75,11 @@
 / {
     sensors {
         triggers-per-rotation = <20>; // change this to the number of detents your encoder has
-        resolution = <2>;
     };
 };
 
 &right_encoder {
+    resolution = <2>;
     steps = <20>; // set this to be 4x triggers-per-rotation first
                   // and then if that doesn't trigger one press per detent,
                   // try 2x or 1x.
