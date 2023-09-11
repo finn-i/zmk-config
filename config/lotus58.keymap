@@ -84,3 +84,7 @@
 //                   // and then if that doesn't trigger one press per detent,
 //                   // try 2x or 1x.
 // };
+
+&right_encoder {
+    resolution = <2>;
+}
