@@ -29,7 +29,7 @@
                           &kp LALT   &kp LGUI  &mo 1      &kp SPACE      &kp SPACE  &mo 2  &kp BSPC  &kp RGUI  
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -79,7 +79,7 @@
 };
 
 &right_encoder {
-    resolution = <2>;
+    resolution = <1>;
     steps = <20>; // set this to be 4x triggers-per-rotation first
                   // and then if that doesn't trigger one press per detent,
                   // try 2x or 1x.
