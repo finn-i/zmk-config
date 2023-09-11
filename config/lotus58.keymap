@@ -79,7 +79,7 @@
 };
 
 &right_encoder {
-    steps = <40>; // set this to be 4x triggers-per-rotation first
+    steps = <20>; // set this to be 4x triggers-per-rotation first
                   // and then if that doesn't trigger one press per detent,
                   // try 2x or 1x.
 };
