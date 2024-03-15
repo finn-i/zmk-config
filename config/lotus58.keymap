@@ -9,8 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-&right_encoder { steps = <36>; };
-&sensors { triggers-per-rotation = <18>; };
+&right_encoder { steps = <20>; };
+&sensors { triggers-per-rotation = <20>; };
 
 / {
     keymap {
