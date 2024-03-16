@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &left_encoder { status = "disabled"; };
-&right_encoder { steps = <80>; };
+&right_encoder { steps = <10>; };
 &sensors {
   sensors = <&right_encoder>;
   triggers-per-rotation = <20>;
