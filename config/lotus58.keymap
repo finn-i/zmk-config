@@ -10,12 +10,12 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &left_encoder { status = "disabled"; };
-&right_encoder { steps = <40>; };
+&right_encoder { steps = <160>; };
 &sensors {
   sensors = <&right_encoder>;
   triggers-per-rotation = <20>;
 };
-
+http://google.com/
 / {
     keymap {
         compatible = "zmk,keymap";
