@@ -15,7 +15,7 @@
   sensors = <&right_encoder>;
   triggers-per-rotation = <20>;
 };
-http://google.com/
+
 / {
     keymap {
         compatible = "zmk,keymap";
