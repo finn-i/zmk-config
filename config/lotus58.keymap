@@ -13,7 +13,7 @@
 &right_encoder { steps = <20>; };
 &sensors {
   sensors = <&right_encoder>;
-  triggers-per-rotation = <10>;
+  triggers-per-rotation = <40>;
 };
 
 / {
