@@ -42,7 +42,7 @@
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         lower_layer {
@@ -57,12 +57,12 @@
 &kp GRAVE  &kp F1    &kp F2    &kp F3      &kp F4     &kp F5                     &kp F6        &kp F7     &kp F8    &kp F9     &kp F10   &kp F11
 &trans     &trans  	 &kp UP    &trans      &trans     &trans                     &trans        &trans     &trans    &trans     &trans    &trans
 &trans     &kp LEFT  &kp DOWN  &kp RIGHT   &trans     &trans    &trans   &trans  &trans        &trans     &trans    &trans     &trans    &trans
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans &trans   &trans  &trans        &trans     &trans    &trans     &trans    &trans
+&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans &bootloader   &trans  &trans        &trans     &trans    &trans     &trans    &trans
                                &trans      &trans     &trans    &trans   &trans  &trans        &trans     &trans
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         raise_layer {
@@ -77,43 +77,12 @@
 &trans     &trans       &trans       &trans       &trans       &trans                          &trans        &trans        &trans        &trans     &trans  &kp DEL
 &trans     &trans       &trans       &trans       &sys_reset   &trans                          &kp PG_UP     &trans        &kp UP        &trans     &trans  &kp PSCRN
 &trans     &trans       &trans       &trans       &bootloader  &trans       &trans   &trans    &kp PG_DN     &kp LEFT      &kp DOWN      &trans     &trans  &kp BSPC
-&trans     &trans       &trans       &trans       &trans       &trans       &trans   &trans    &kp KP_PLUS   &kp MINUS     &kp EQUAL     &trans     &trans  &kp BSLH
+&trans     &trans       &trans       &trans       &trans       &trans       &trans   &bootloader    &kp KP_PLUS   &kp MINUS     &kp EQUAL     &trans     &trans  &kp BSLH
                                      &trans       &trans       &trans       &trans   &trans    &trans        &trans        &trans   
             >;
 
             // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
     };
 };
-
-// &right_encoder: encoder_right {
-//     compatible = "alps,ec11";
-//     a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//     b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-//     steps = <80>;
-// };
-
-// &sensors {
-//     compatible = "zmk,keymap-sensors";
-//     sensors = <&right_encoder>;
-//     triggers-per-rotation = <20>;
-// };
-
-// &right_encoder { steps = <36>; };
-
-// &sensors {
-//     triggers-per-rotation = <18>;
-// };
-
-// / {
-//     sensors {
-//         triggers-per-rotation = <20>; // change this to the number of detents your encoder has
-//     };
-// };
-
-// &right_encoder {
-//     steps = <80>; // set this to be 4x triggers-per-rotation first
-//                   // and then if that doesn't trigger one press per detent,
-//                   // try 2x or 1x.
-// };
