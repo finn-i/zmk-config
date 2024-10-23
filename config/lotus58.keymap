@@ -26,7 +26,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label="ROOT";
+            label="NOMAD";
 //   ------------------------------------------------------------------------------------------------------------
 //  0|  ESC  |  1  |  2  |  3   |  4   |  5   |                     |  6   |  7    |  8    |  9   |   0   |   =   | 11
 // 12|  TAB  |  Q  |  W  |  E   |  R   |  T   |                     |  Y   |  U    |  I    |  O   |   P   |   [   | 23
@@ -55,9 +55,9 @@
 //                     |  F11 |      |      |        |  |       |      |       |  F12  |
             bindings = <
 &kp GRAVE  &kp F1    &kp F2    &kp F3      &kp F4     &kp F5                     &kp F6        &kp F7     &kp F8    &kp F9     &kp F10   &kp F11
-&trans     &trans  	 &kp UP    &trans      &trans     &trans                     &trans        &trans     &trans    &trans     &trans    &trans
+&trans     &trans  	 &kp UP    &trans      &trans     &trans                     &trans        &trans &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0 &bt BT_CLR
 &trans     &kp LEFT  &kp DOWN  &kp RIGHT   &trans     &trans    &trans   &trans  &trans        &trans     &trans    &trans     &trans    &trans
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans &trans &bootloader   &trans  &trans        &trans     &trans    &trans     &trans    &trans
+&trans     &trans    &trans    &trans      &trans     &trans &bootloader &trans  &trans        &trans     &trans    &trans     &trans    &trans
                                &trans      &trans     &trans    &trans   &trans  &trans        &trans     &trans
             >;
 
